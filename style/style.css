@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #34495e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notifications {
+  position: fixed;
+  top: 25px;
+  right: 30px;
+  width: 350px;
+}
+.notifications :where(.notification, div) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.notifications .notification {
+  font-size: 20px;
+  font-weight: 400;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #fff;
+  padding: 8px 10px 8px 16px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  -webkit-animation: intro 0.3s linear;
+          animation: intro 0.3s linear;
+  margin-bottom: 20px;
+}
+@-webkit-keyframes intro {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+@keyframes intro {
+  0% {
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+.notifications .notification .content {
+  gap: 10px;
+}
+.notifications .notification .content svg {
+  width: 20px;
+}
+.notifications .notification .cancel {
+  cursor: pointer;
+  color: rgb(116, 107, 107);
+  transition: 0.3s;
+}
+.notifications .notification .cancel:hover {
+  color: rgb(0, 0, 0);
+}
+.notifications .notification::before {
+  content: "";
+  background-color: #0abf30;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-animation: timer 5s linear;
+          animation: timer 5s linear;
+}
+@-webkit-keyframes timer {
+  100% {
+    width: 0;
+  }
+}
+@keyframes timer {
+  100% {
+    width: 0;
+  }
+}
+
+.notification.hide {
+  -webkit-animation: outro 0.3s forwards;
+          animation: outro 0.3s forwards;
+}
+
+@-webkit-keyframes outro {
+  0% {
+    transform: translateX(-10%);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(calc(100% + 30px));
+  }
+}
+
+@keyframes outro {
+  0% {
+    transform: translateX(-10%);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(calc(100% + 30px));
+  }
+}
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+.buttons button {
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 200;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+.buttons button:hover {
+  box-shadow: 0px 0px 100px rgb(0, 0, 0);
+  -webkit-animation: btnanimation 0.1s forwards;
+          animation: btnanimation 0.1s forwards;
+}
+@-webkit-keyframes btnanimation {
+  100% {
+    transform: translateY(2px);
+  }
+}
+@keyframes btnanimation {
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+button#success, .notification#success::before {
+  background-color: #0abf30;
+}
+
+button#error, .notification#error {
+  background-color: #e24d4c;
+}
+
+button#info, .notification#info {
+  background-color: #3498db;
+}
+
+button#warning, .notification#warning {
+  background-color: #e9bd0c;
+}/*# sourceMappingURL=style.css.map */
