@@ -91,19 +91,12 @@ body {
 
 
 .notification.hide{
-    animation: outro .3s forwards;
+    animation: outro .1s forwards;
 }
 
 @keyframes outro {
-    0%{
-        transform: translateX(-10%);
-    }
-    25%{
-        transform: translateX(10px);
-    }
-    50%{
-        transform: translateX(-5%);
-    }
+    
+    
     100%{
         transform: translateX(calc(100% + 30px));
     }
@@ -127,7 +120,7 @@ body {
         border-radius: 8px;
         &:hover{
             box-shadow: 0px  0px 100px rgba(0, 0, 0, 1);
-            animation: btnanimation .1s forwards;
+            animation: btnanimation .5s forwards;
         }
 
         @keyframes btnanimation {

@@ -107,35 +107,17 @@ body {
 }
 
 .notification.hide {
-  -webkit-animation: outro 0.3s forwards;
-          animation: outro 0.3s forwards;
+  -webkit-animation: outro 0.1s forwards;
+          animation: outro 0.1s forwards;
 }
 
 @-webkit-keyframes outro {
-  0% {
-    transform: translateX(-10%);
-  }
-  25% {
-    transform: translateX(10px);
-  }
-  50% {
-    transform: translateX(-5%);
-  }
   100% {
     transform: translateX(calc(100% + 30px));
   }
 }
 
 @keyframes outro {
-  0% {
-    transform: translateX(-10%);
-  }
-  25% {
-    transform: translateX(10px);
-  }
-  50% {
-    transform: translateX(-5%);
-  }
   100% {
     transform: translateX(calc(100% + 30px));
   }
@@ -159,8 +141,8 @@ body {
 }
 .buttons button:hover {
   box-shadow: 0px 0px 100px rgb(0, 0, 0);
-  -webkit-animation: btnanimation 0.1s forwards;
-          animation: btnanimation 0.1s forwards;
+  -webkit-animation: btnanimation 0.5s forwards;
+          animation: btnanimation 0.5s forwards;
 }
 @-webkit-keyframes btnanimation {
   100% {
