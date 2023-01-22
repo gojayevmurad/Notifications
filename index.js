@@ -29,7 +29,7 @@ const deleteNotification = (toast) =>{
     toast.classList.add('hide')
     setInterval(() => {
         toast.remove()
-    }, 400);
+    }, 100);
 
 }
 
